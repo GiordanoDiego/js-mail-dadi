@@ -1,46 +1,16 @@
-/* -----------------RESET RULE----------------- */
-
-
-
-/* -----------------GENERAL RULE----------------- */
-
-
-/* -----------------HEADER RULE----------------- */
-
-
-/* -----------------MAIN RULE------------------- */
-
-
-/* -----------------FOOTER RULE----------------- */
-
-
-
-
-/* -----------------MEDIA QUERY----------------- */
-/* IN MOBILE FIRST */
-
-@media screen and (max-width: 576px) {
-
-}
-@media screen and (max-width: 768px) {
-
-}
-@media screen and (max-width: 992px) {
-
+body{
+    background-color: brown;
 }
 
-/* IN DEKSTOP FIRST */
-@media screen and (min-width: 992px) {
-
-}
-@media screen and (min-width: 768px) {
-
-}
-@media screen and (min-width: 576px) {
-
+.user_registrered{
+    background-color: lightgrey;
+    color: black;
+    border-radius: 10px;
+    width: 600px;
+    margin: 0 auto;
 }
 
-/* -----------------DEBUG----------------- */
-.debug .container {
-    border: 1px dashed red;
+.container_user{
+    width: 600px;
+    margin: 0 auto;
 }
