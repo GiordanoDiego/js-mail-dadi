@@ -72,21 +72,28 @@ myButtonRegistrati.addEventListener('click', function(){
         alert("Inserisci una email valida");
     }
     else{
+        let isPresent = 0;
+        console.log('isPresent  prima if', isPresent, typeof isPresent); 
+        
         for(i = 0; i < arrayMail.length; i++){
+            
             if(userEmailInputValue == arrayMail[i]){
+                i = arrayMail.length;
+                isPresent = 1; // imposto variabile che dichiara la presenza dell'email
                 alert("Email presente nel database");
-                i = arrayMail.length;
-            }
-            else if (userEmailInputValue != arrayMail[i]){
-                alert("Registrato");
-                i = arrayMail.length;
-                arrayMail.push(userEmailInputValue);
-                userRegistrered.innerHTML = "";
-                for(i = 0; i < arrayMail.length; i++){
-                    userRegistrered.innerHTML +="<div>"+ arrayMail[i] + "</div>";  
-                }
             }
         }
+        console.log('isPresent  dopo if', isPresent, typeof isPresent); 
+
+        if (isPresent == 0){ 
+            arrayMail.push(userEmailInputValue);
+            userRegistrered.innerHTML = "";
+            for(i = 0; i < arrayMail.length; i++){
+                userRegistrered.innerHTML +="<div>"+ arrayMail[i] + "</div>";  
+            }
+            alert("Registrato");
+        }
+        
     }
 
     
