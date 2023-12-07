@@ -75,12 +75,12 @@ myButtonRegistrati.addEventListener('click', function(){
         let isPresent = 0;
         console.log('isPresent  prima if', isPresent, typeof isPresent); 
         
-        for(i = 0; i < arrayMail.length; i++){
+        for(let i = 0; i < arrayMail.length; i++){
             
             if(userEmailInputValue == arrayMail[i]){
                 i = arrayMail.length;
                 isPresent = 1; // imposto variabile che dichiara la presenza dell'email
-                alert("Email presente nel database");
+                alert("Email presente nel database, puoi accedere!");
             }
         }
         console.log('isPresent  dopo if', isPresent, typeof isPresent); 
@@ -88,10 +88,10 @@ myButtonRegistrati.addEventListener('click', function(){
         if (isPresent == 0){ 
             arrayMail.push(userEmailInputValue);
             userRegistrered.innerHTML = "";
-            for(i = 0; i < arrayMail.length; i++){
+            for(let i = 0; i < arrayMail.length; i++){
                 userRegistrered.innerHTML +="<div>"+ arrayMail[i] + "</div>";  
             }
-            alert("Registrato");
+            alert("Email non presente nel database, sei stato registrato. Da ora puoi accedere!!");
         }
         
     }
